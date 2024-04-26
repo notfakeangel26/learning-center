@@ -48,10 +48,28 @@ export class StudentManagementComponent implements OnInit, AfterViewInit{
       });
   }
 
+  private updateStudent(){
+    let studentToUpdate: Student = this.studentData;
+    this.studentService.update(this.studentData.id, studentToUpdate)
+      .subscribe((response: any)=>{
+        this.dataSource.data = this.dataSource.data.map((student: Student)=>{
+          if (student.id !== response.id){
+            return response;
+          }
+          return student;
+        });
+      });
+  }
+
   // UI Event Handlers
 
   onDeleteItem(element: Student){
     this.deleteStudent(element.id)
+  }
+
+  onStudentUpdate(element: Student){
+    this.studentData = element;
+    this.updateStudent();
   }
 
 }
