@@ -1,0 +1,28 @@
+{
+  "students": [
+    {
+      "id": 4,
+      "name": "Michael Phelps",
+      "age": 31,
+      "address": "USA"
+    },
+    {
+      "id": 5,
+      "name": "Usain Bolt",
+      "age": 35,
+      "address": "Jamaica"
+    },
+    {
+      "id": 6,
+      "name": "Roger Federer",
+      "age": 41,
+      "address": "Suiza"
+    },
+    {
+      "id": 7,
+      "name": "Paolo Guerrero",
+      "age": 40,
+      "address": "Perú"
+    }
+  ]
+}
